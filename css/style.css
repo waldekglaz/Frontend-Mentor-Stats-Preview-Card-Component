@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.body {
+  background-color: #090b1a;
+  color: white;
+}
+
+.body .wrapper {
+  width: 84%;
+  margin: 14% auto 0;
+  border-radius: 10px;
+}
+
+.body .wrapper .header {
+  min-height: 25vh;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.body .wrapper .content {
+  background-color: #1b1938;
+  padding: 10%;
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */
