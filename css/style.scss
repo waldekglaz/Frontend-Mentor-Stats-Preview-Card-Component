@@ -20,19 +20,110 @@ $font-secondary:'Lexend Deca', sans-serif;
     background-color: $clr-main-bg;
     color: $clr-white;
     .wrapper{
-        width: 84%;
+        width: 90%;
         margin: 14% auto 0;
         border-radius: 10px;
         .header{
-            min-height:25vh;
-            background-image: url("../images/image-header-mobile.jpg");
+            min-height:30vh;
+            background-image:
+            linear-gradient(rgba(91, 13, 139, 0.7)), url("../images/image-header-mobile.jpg");
             background-size: cover;
             background-position: center;
         }
         .content{
             background-color: $clr-card-bg;
-            padding: 10%;
-            text-align: justify;
+            padding: 10% 10% 5%;
+            text-align: center;
+            
+                .title{
+                    font-size: 1.75em;
+                    margin-bottom: 0.5em;
+                        .accent{
+                            font-size: inherit;
+                            color: $clr-violet;
+                        }
+                }
+                .paragraph{
+                    line-height: 1.7;
+                    color: $clr-paragraph-white;
+                    margin-bottom: 2em;
+                }
+                .counter{
+                    margin-bottom: 2em;
+                    .number{
+                        font-weight: 700;
+                        font-size: 1.25em;
+                        margin-bottom: 0.5em;
+                    }
+                    .unit{
+                        color: $clr-paragraph-white;
+                        text-transform: uppercase;
+                        font-size: 0.5em;
+                        letter-spacing: 1px;
+                    }
+                }
+                    
+        }
+
+    }
+    .attribution{
+        padding: 2em;
+        text-align: center;
+        a{
+            color: $clr-paragraph-white;
+            text-decoration: none;
+            transition: 0.2s ease-in;
+            &:hover{
+                color: $clr-violet;
+            }
         }
     }
+}
+
+@media (min-width:768px){
+    .body{
+        .wrapper{
+            .content{
+                padding:10% 18% 2%;
+                .counter-wrapper{
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }  
+}
+@media(min-width:1024px){
+    .body{
+        
+        .wrapper{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1024px;
+            
+            .header{
+                background-image: linear-gradient(rgba(91, 13, 139, 0.7)), url("../images/image-header-desktop.jpg");
+                min-height: 30em;
+                width: 100%;
+                flex-basis: 50%;
+                order: 2;
+                text-align: left;
+            }
+            .content{
+                flex-basis: 50%;
+                padding: 8% 10%;
+                height: 30em;
+                order: 1;
+                overflow-y: hidden;
+                text-align: left;
+                .counter-wrapper{
+                    justify-content: space-between;
+                    
+                }
+            }
+            }
+            
+    }
+    
 }
